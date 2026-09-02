@@ -93,7 +93,7 @@ export function AboutPage() {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-16 md:py-24 bg-background">
+      <section id="values" className="py-16 md:py-24 bg-background">
         <div className="container px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="h-full border-0 shadow-sm hover:shadow-lg transition-shadow bg-background">
@@ -224,7 +224,7 @@ export function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section className="py-16 md:py-24 bg-background">
+      <section id="leadership" className="py-16 md:py-24 bg-background">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -260,7 +260,7 @@ export function AboutPage() {
       </section>
 
       {/* Governance */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section id="governance" className="py-16 md:py-24 bg-muted/30">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

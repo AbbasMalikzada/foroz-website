@@ -32,8 +32,8 @@ const footerNavigation = {
     { name: "Donate", href: "/donate" },
     { name: "Volunteer", href: "/get-involved#volunteer" },
     { name: "Careers", href: "/get-involved#careers" },
-    { name: "Partner With Us", href: "/get-involved#partner" },
-    { name: "Fundraise", href: "/get-involved#fundraise" },
+    { name: "Partner With Us", href: "/get-involved/partner" },
+    { name: "Fundraise", href: "/donate" },
   ],
   About: [
     { name: "Our Story", href: "/about" },

@@ -356,7 +356,7 @@ export function ProgramsPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="how-heading">
+      <section id="enroll" className="py-16 md:py-24 bg-muted/30" aria-labelledby="how-heading">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 id="how-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">

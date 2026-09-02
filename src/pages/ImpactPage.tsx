@@ -176,7 +176,7 @@ export function ImpactPage() {
       </section>
 
       {/* SDG Alignment */}
-      <section className="py-16 md:py-24 bg-background" aria-labelledby="sdg-heading">
+      <section id="sdgs" className="py-16 md:py-24 bg-background" aria-labelledby="sdg-heading">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 id="sdg-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -221,7 +221,7 @@ export function ImpactPage() {
       </section>
 
       {/* Financial Transparency */}
-      <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="financial-heading">
+      <section id="transparency" className="py-16 md:py-24 bg-muted/30" aria-labelledby="financial-heading">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 id="financial-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -274,7 +274,7 @@ export function ImpactPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-background" aria-labelledby="stories-heading">
+      <section id="stories" className="py-16 md:py-24 bg-background" aria-labelledby="stories-heading">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 id="stories-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -323,7 +323,7 @@ export function ImpactPage() {
       </section>
 
       {/* Annual Reports */}
-      <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="reports-heading">
+      <section id="reports" className="py-16 md:py-24 bg-muted/30" aria-labelledby="reports-heading">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 id="reports-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">

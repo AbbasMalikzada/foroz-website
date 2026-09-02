@@ -133,7 +133,7 @@ export function GetInvolvedPage() {
       </section>
 
       {/* Current Openings */}
-      <section className="py-16 md:py-24 bg-background" aria-labelledby="careers-heading">
+      <section id="careers" className="py-16 md:py-24 bg-background" aria-labelledby="careers-heading">
         <div className="container px-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
             <div>
