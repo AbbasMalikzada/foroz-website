@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FOROZ</title>
+    <script>
+      // GitHub Pages has no server-side routing, so a direct hit on a
+      // client-side route (e.g. /foroz-website/about) 404s here. Encode
+      // the path into a query string and redirect to index.html, which
+      // decodes it back before React Router mounts.
+      var segmentsToKeep = 1
+      var l = window.location
+      var path = l.pathname.split('/').slice(0, 1 + segmentsToKeep).join('/')
+      var rest = l.pathname.split('/').slice(1 + segmentsToKeep).join('/')
+      l.replace(
+        path + '/?p=/' + rest.replace(/&/g, '~and~') + l.search.replace(/^\?/, '~and~').replace(/&/g, '~and~') + l.hash
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
