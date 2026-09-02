@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -365,17 +366,27 @@ export function ContactPage() {
             {/* Quick Links */}
             <div className="mt-10 grid md:grid-cols-3 gap-6 text-center">
               {[
-                { title: "FAQ", desc: "Quick answers to common questions", href: "/faq", icon: Info },
-                { title: "Live Chat", desc: "Chat with our team (Mon-Fri 9-5 EST)", href: "/chat", icon: MessageSquare },
-                { title: "Schedule a Call", desc: "Book a 15-min discovery call", href: "/schedule", icon: CalendarIcon },
+                { title: "FAQ", desc: "Quick answers to common questions", href: "/contact#faqs", icon: Info, internal: true },
+                { title: "Email Us", desc: "hello@foroz.org — we reply within 24 hours", href: "mailto:hello@foroz.org", icon: MessageSquare, internal: false },
+                { title: "Read Our Blog", desc: "Stories, updates, and program news", href: "/blog", icon: CalendarIcon, internal: true },
               ].map((item, index) => (
-                <a key={item.title} href={item.href} className="p-6 rounded-xl bg-background border hover:border-foroz-300 dark:hover:border-foroz-700 transition-colors animate-slide-up" style={{ animationDelay: `${index * 80}ms` }}>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-foroz-100 text-foroz-600 dark:bg-foroz-900/30 dark:text-foroz-400 mb-3 mx-auto">
-                    <item.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </a>
+                item.internal ? (
+                  <Link key={item.title} to={item.href} className="p-6 rounded-xl bg-background border hover:border-foroz-300 dark:hover:border-foroz-700 transition-colors animate-slide-up" style={{ animationDelay: `${index * 80}ms` }}>
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-foroz-100 text-foroz-600 dark:bg-foroz-900/30 dark:text-foroz-400 mb-3 mx-auto">
+                      <item.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </Link>
+                ) : (
+                  <a key={item.title} href={item.href} className="p-6 rounded-xl bg-background border hover:border-foroz-300 dark:hover:border-foroz-700 transition-colors animate-slide-up" style={{ animationDelay: `${index * 80}ms` }}>
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-foroz-100 text-foroz-600 dark:bg-foroz-900/30 dark:text-foroz-400 mb-3 mx-auto">
+                      <item.icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </a>
+                )
               ))}
             </div>
           </div>
@@ -383,7 +394,7 @@ export function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-background" aria-labelledby="faq-heading">
+      <section id="faqs" className="py-16 md:py-24 bg-background" aria-labelledby="faq-heading">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">

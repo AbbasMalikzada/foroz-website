@@ -97,7 +97,7 @@ export function NotFoundPage() {
               </Link>
             </Button>
             <Button asChild variant="ghost" className="w-full sm:w-auto gap-2">
-              <Link to="/faq">
+              <Link to="/contact#faqs">
                 <Search className="h-4 w-4" />
                 Browse FAQ
               </Link>

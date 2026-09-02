@@ -7,12 +7,13 @@ import { Textarea } from "@/components/ui/textarea"
 import { api } from "@/lib/api"
 
 type ApplyFormProps = {
-  type: "volunteer" | "opportunity"
+  type: "volunteer" | "opportunity" | "program" | "career" | "partner"
   refId: string
   title: string
+  messageLabel?: string
 }
 
-export function ApplyForm({ type, refId, title }: ApplyFormProps) {
+export function ApplyForm({ type, refId, title, messageLabel = "Why are you a good fit? (optional)" }: ApplyFormProps) {
   const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", message: "" })
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
 
@@ -73,7 +74,7 @@ export function ApplyForm({ type, refId, title }: ApplyFormProps) {
         />
       </div>
       <div>
-        <Label htmlFor="message">Why are you a good fit? (optional)</Label>
+        <Label htmlFor="message">{messageLabel}</Label>
         <Textarea
           id="message"
           rows={4}

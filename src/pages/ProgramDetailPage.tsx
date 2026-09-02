@@ -454,7 +454,7 @@ export function ProgramDetailPage() {
                       <p className="text-sm text-muted-foreground">Join {course.enrolled.toLocaleString()}+ learners. Free forever. No credit card required.</p>
                     </div>
                     <Button asChild size="lg" className="w-full sm:w-auto gap-2 px-8 py-3 text-lg" variant="default">
-                      <Link to="/programs/enroll">Enroll for Free</Link>
+                      <Link to={`/programs/enroll?course=${course.slug}`}>Enroll for Free</Link>
                       <ArrowRight className="h-5 w-5" />
                     </Button>
                   </div>
@@ -549,7 +549,7 @@ export function ProgramDetailPage() {
                   <h3 className="text-2xl font-bold text-foreground mb-2">Start Learning Today — Completely Free</h3>
                   <p className="text-muted-foreground mb-6">No credit card required. No hidden fees. Lifetime access to course materials.</p>
                   <Button asChild size="lg" className="w-full sm:w-auto gap-2 px-8 py-3 text-lg" variant="default">
-                    <Link to="/programs/enroll">Enroll Now</Link>
+                    <Link to={`/programs/enroll?course=${course.slug}`}>Enroll Now</Link>
                     <ArrowRight className="h-5 w-5" />
                   </Button>
                   <p className="mt-4 text-sm text-muted-foreground">
